@@ -122,8 +122,6 @@ public class TechJobs {
                 System.out.println(hashes);
 
                 for (Map.Entry<String,String> jobs: items.entrySet()) {
-//                    List toSort = new LinkedList(items.entrySet());
-//                    Collections.sort(toSort);
                     System.out.println(jobs.getKey() + ": " + jobs.getValue());
                 }
                 System.out.println(hashes + '\n');
