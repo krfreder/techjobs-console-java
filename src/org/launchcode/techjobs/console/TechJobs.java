@@ -1,10 +1,7 @@
 package org.launchcode.techjobs.console;
 
 import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 
 /**
  * Created by LaunchCode
@@ -114,13 +111,22 @@ public class TechJobs {
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
 //    Iterate over ArrayList of jobs
 //    Nest a loop to loop over each HashMap
+//    Create if/else to check if the ArrayList of searchData contains data
         String hashes = "*****";
-        for (HashMap<String, String> items: someJobs) {
-            System.out.println(hashes);
-            for (Map.Entry<String,String> jobs: items.entrySet()) {
-                System.out.println(jobs.getKey() + ": " + jobs.getValue());
+
+        if (someJobs.size() == 0) {
+            System.out.println("Please try another search term.");
+        } else {
+
+            for (HashMap<String, String> items: someJobs) {
+                System.out.println(hashes);
+
+                for (Map.Entry<String,String> jobs: items.entrySet()) {
+//                    List toSort = new LinkedList(items.entrySet());
+//                    Collections.sort(toSort);
+                    System.out.println(jobs.getKey() + ": " + jobs.getValue());
+                }
             }
         }
-        printJobs(someJobs);
     }
 }
