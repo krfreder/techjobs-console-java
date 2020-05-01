@@ -115,7 +115,7 @@ public class TechJobs {
         String hashes = "*****";
 
         if (someJobs.size() == 0) {
-            System.out.println("Please try another search term.");
+            System.out.println("No results, please try another search term.");
         } else {
 
             for (HashMap<String, String> items: someJobs) {
@@ -126,6 +126,7 @@ public class TechJobs {
 //                    Collections.sort(toSort);
                     System.out.println(jobs.getKey() + ": " + jobs.getValue());
                 }
+                System.out.println(hashes + '\n');
             }
         }
     }
